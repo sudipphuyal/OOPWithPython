@@ -22,4 +22,17 @@ class Car:
 my_car = Car("Toyota", "Corolla", 2020)
 # print(my_car.description())
 
+class arkoClass:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def speak(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class absClass(arkoClass):
+    def speak(self):
+        return f"This is return {self.name},{self.age}"
+    
+myabsclass = absClass("ss",55)
+print(myabsclass.speak())
 
